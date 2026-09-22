@@ -117,14 +117,6 @@ window.REVIEWS = [
     poster: "assets/reviews/gary-vance.png",
   },
   {
-    id: "brian-ross",
-    quote: "Our new website redesign paid off immediately. We cut our monthly ad spend from $3k down to about $1k, but our actual lead flow hasn't dropped at all. The site simply converts real local visitors into qualified calls much better.",
-    name: "Brian Ross",
-    company: "Tri-County Glass & Mirror (Columbus, OH)",
-    videoSrc: "assets/reviews/brian-ross.mp4",
-    poster: "assets/reviews/brian-ross.png",
-  },
-  {
     id: "jason-vance",
     quote: "Paid social ads brought us people looking for cheap handymen, but Google search leads actually convert into high-ticket window installations. If you want serious buyers instead of quote shoppers, focus on Google search.",
     name: "Jason Vance",
@@ -205,14 +197,6 @@ window.REVIEWS = [
     poster: "assets/reviews/eric-miller.png",
   },
   {
-    id: "dan-snoking",
-    quote: "I came in skeptical because of the affordable pricing, expecting low effort. Two weeks in, the service and results completely blew past the agencies I used to pay double for.",
-    name: "Dan",
-    company: "Sno King Hauling & Junk Removal (Snohomish, WA)",
-    videoSrc: "assets/reviews/dan-snoking.mp4",
-    poster: "assets/reviews/dan-snoking.png",
-  },
-  {
     id: "scott-parker",
     quote: "Every agency promises top rankings, but these guys delivered in under 30 days. I went from worrying about the commitment to answering quote requests for custom replacement windows on a daily basis.",
     name: "Scott Parker",
@@ -259,13 +243,5 @@ window.REVIEWS = [
     company: "Visionary Glass Co. (Indianapolis, IN)",
     videoSrc: "assets/reviews/alan-vance.mp4",
     poster: "assets/reviews/alan-vance.png",
-  },
-  {
-    id: "frank-miller",
-    quote: "They don't just build a nice site; they understand the entire window and door industry from top to bottom. From web conversion to targeted ads, having a partner who speaks contractor language makes all the difference.",
-    name: "Frank Miller",
-    company: "Clear Choice Glass Solutions (Miami, FL)",
-    videoSrc: "assets/reviews/frank-miller.mp4",
-    poster: "assets/reviews/frank-miller.png",
   },
 ];
