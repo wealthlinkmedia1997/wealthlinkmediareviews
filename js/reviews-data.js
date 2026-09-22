@@ -1,6 +1,7 @@
 // ============================================================
 // Customer review videos. Each entry plays assets/reviews/<id>.mp4 on
-// hover/click, with assets/reviews/<id>.jpg shown as the thumbnail.
+// hover/click, with assets/reviews/<id>.jpg (or .png, per entry) shown
+// as the thumbnail.
 // ============================================================
 window.REVIEWS = [
   {
@@ -89,7 +90,7 @@ window.REVIEWS = [
     name: "Frank",
     company: "Premier Window & Glass Solutions, Charlotte NC",
     videoSrc: "assets/reviews/frank-premier.mp4",
-    poster: "assets/reviews/frank-premier.jpg",
+    poster: "assets/reviews/frank-premier.png",
   },
   {
     id: "mark-stevens",
@@ -97,7 +98,7 @@ window.REVIEWS = [
     name: "Mark Stevens",
     company: "Apex Window Tinting & Films (Austin, TX)",
     videoSrc: "assets/reviews/mark-stevens.mp4",
-    poster: "assets/reviews/mark-stevens.jpg",
+    poster: "assets/reviews/mark-stevens.png",
   },
   {
     id: "dave-miller",
@@ -105,7 +106,7 @@ window.REVIEWS = [
     name: "Dave Miller",
     company: "Miller & Sons Window Repair (Chicago, IL)",
     videoSrc: "assets/reviews/dave-miller.mp4",
-    poster: "assets/reviews/dave-miller.jpg",
+    poster: "assets/reviews/dave-miller.png",
   },
   {
     id: "gary-vance",
@@ -113,7 +114,7 @@ window.REVIEWS = [
     name: "Gary Vance",
     company: "ClearView Window Solutions (Orlando, FL)",
     videoSrc: "assets/reviews/gary-vance.mp4",
-    poster: "assets/reviews/gary-vance.jpg",
+    poster: "assets/reviews/gary-vance.png",
   },
   {
     id: "brian-ross",
@@ -121,7 +122,7 @@ window.REVIEWS = [
     name: "Brian Ross",
     company: "Tri-County Glass & Mirror (Columbus, OH)",
     videoSrc: "assets/reviews/brian-ross.mp4",
-    poster: "assets/reviews/brian-ross.jpg",
+    poster: "assets/reviews/brian-ross.png",
   },
   {
     id: "jason-vance",
@@ -129,7 +130,7 @@ window.REVIEWS = [
     name: "Jason Vance",
     company: "Precision Window Replacement (Phoenix, AZ)",
     videoSrc: "assets/reviews/jason-vance.mp4",
-    poster: "assets/reviews/jason-vance.jpg",
+    poster: "assets/reviews/jason-vance.png",
   },
   {
     id: "steve-higgins",
@@ -137,7 +138,7 @@ window.REVIEWS = [
     name: "Steve Higgins",
     company: "Higgins Custom Blinds & Shutters (Denver, CO)",
     videoSrc: "assets/reviews/steve-higgins.mp4",
-    poster: "assets/reviews/steve-higgins.jpg",
+    poster: "assets/reviews/steve-higgins.png",
   },
   {
     id: "kevin-brooks",
@@ -145,7 +146,7 @@ window.REVIEWS = [
     name: "Kevin Brooks",
     company: "Brooks Residential Glass (Atlanta, GA)",
     videoSrc: "assets/reviews/kevin-brooks.mp4",
-    poster: "assets/reviews/kevin-brooks.jpg",
+    poster: "assets/reviews/kevin-brooks.png",
   },
   {
     id: "tom-reynolds",
@@ -153,7 +154,7 @@ window.REVIEWS = [
     name: "Tom Reynolds",
     company: "Heritage Window & Door Co. (Seattle, WA)",
     videoSrc: "assets/reviews/tom-reynolds.mp4",
-    poster: "assets/reviews/tom-reynolds.jpg",
+    poster: "assets/reviews/tom-reynolds.png",
   },
   {
     id: "marcus-vance",
@@ -161,7 +162,7 @@ window.REVIEWS = [
     name: "Marcus Vance",
     company: "SunShield Window Tinting (Dallas, TX)",
     videoSrc: "assets/reviews/marcus-vance.mp4",
-    poster: "assets/reviews/marcus-vance.jpg",
+    poster: "assets/reviews/marcus-vance.png",
   },
   {
     id: "paul-davis",
@@ -169,7 +170,7 @@ window.REVIEWS = [
     name: "Paul Davis",
     company: "Coastal Impact Windows (Tampa, FL)",
     videoSrc: "assets/reviews/paul-davis.mp4",
-    poster: "assets/reviews/paul-davis.jpg",
+    poster: "assets/reviews/paul-davis.png",
   },
   {
     id: "rick-coleman",
@@ -177,7 +178,7 @@ window.REVIEWS = [
     name: "Rick Coleman",
     company: "SunPro Window Films (San Antonio, TX)",
     videoSrc: "assets/reviews/rick-coleman.mp4",
-    poster: "assets/reviews/rick-coleman.jpg",
+    poster: "assets/reviews/rick-coleman.png",
   },
   {
     id: "anthony-lopez",
@@ -185,7 +186,7 @@ window.REVIEWS = [
     name: "Anthony Lopez",
     company: "Elite Window Tinting (Las Vegas, NV)",
     videoSrc: "assets/reviews/anthony-lopez.mp4",
-    poster: "assets/reviews/anthony-lopez.jpg",
+    poster: "assets/reviews/anthony-lopez.png",
   },
   {
     id: "chris-turner",
@@ -193,7 +194,7 @@ window.REVIEWS = [
     name: "Chris Turner",
     company: "Premier Window & Glass Repair (Charlotte, NC)",
     videoSrc: "assets/reviews/chris-turner.mp4",
-    poster: "assets/reviews/chris-turner.jpg",
+    poster: "assets/reviews/chris-turner.png",
   },
   {
     id: "eric-miller",
@@ -201,7 +202,7 @@ window.REVIEWS = [
     name: "Eric Miller",
     company: "Miller Architectural Glass (Philadelphia, PA)",
     videoSrc: "assets/reviews/eric-miller.mp4",
-    poster: "assets/reviews/eric-miller.jpg",
+    poster: "assets/reviews/eric-miller.png",
   },
   {
     id: "dan-snoking",
@@ -209,7 +210,7 @@ window.REVIEWS = [
     name: "Dan",
     company: "Sno King Hauling & Junk Removal (Snohomish, WA)",
     videoSrc: "assets/reviews/dan-snoking.mp4",
-    poster: "assets/reviews/dan-snoking.jpg",
+    poster: "assets/reviews/dan-snoking.png",
   },
   {
     id: "scott-parker",
@@ -217,7 +218,7 @@ window.REVIEWS = [
     name: "Scott Parker",
     company: "Horizon Window & Door (San Diego, CA)",
     videoSrc: "assets/reviews/scott-parker.mp4",
-    poster: "assets/reviews/scott-parker.jpg",
+    poster: "assets/reviews/scott-parker.png",
   },
   {
     id: "greg-vance",
@@ -225,7 +226,7 @@ window.REVIEWS = [
     name: "Greg Vance",
     company: "Vance Glass & Mirror (St. Louis, MO)",
     videoSrc: "assets/reviews/greg-vance.mp4",
-    poster: "assets/reviews/greg-vance.jpg",
+    poster: "assets/reviews/greg-vance.png",
   },
   {
     id: "derek-hayes",
@@ -233,7 +234,7 @@ window.REVIEWS = [
     name: "Derek Hayes",
     company: "Alamo Window Tinting (San Antonio, TX)",
     videoSrc: "assets/reviews/derek-hayes.mp4",
-    poster: "assets/reviews/derek-hayes.jpg",
+    poster: "assets/reviews/derek-hayes.png",
   },
   {
     id: "justin-reed",
@@ -241,7 +242,7 @@ window.REVIEWS = [
     name: "Justin Reed",
     company: "Music City Window Replacements (Nashville, TN)",
     videoSrc: "assets/reviews/justin-reed.mp4",
-    poster: "assets/reviews/justin-reed.jpg",
+    poster: "assets/reviews/justin-reed.png",
   },
   {
     id: "victor-sterling",
@@ -249,7 +250,7 @@ window.REVIEWS = [
     name: "Victor Sterling",
     company: "Sterling Windows & Doors (Portland, OR)",
     videoSrc: "assets/reviews/victor-sterling.mp4",
-    poster: "assets/reviews/victor-sterling.jpg",
+    poster: "assets/reviews/victor-sterling.png",
   },
   {
     id: "alan-vance",
@@ -257,7 +258,7 @@ window.REVIEWS = [
     name: "Alan Vance",
     company: "Visionary Glass Co. (Indianapolis, IN)",
     videoSrc: "assets/reviews/alan-vance.mp4",
-    poster: "assets/reviews/alan-vance.jpg",
+    poster: "assets/reviews/alan-vance.png",
   },
   {
     id: "frank-miller",
@@ -265,6 +266,6 @@ window.REVIEWS = [
     name: "Frank Miller",
     company: "Clear Choice Glass Solutions (Miami, FL)",
     videoSrc: "assets/reviews/frank-miller.mp4",
-    poster: "assets/reviews/frank-miller.jpg",
+    poster: "assets/reviews/frank-miller.png",
   },
 ];
