@@ -139,7 +139,8 @@ h1 .accent {
 }
 .review-attribution {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--text-muted);
   margin: 0;
 }
