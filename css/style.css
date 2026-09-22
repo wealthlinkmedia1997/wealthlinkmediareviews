@@ -1,0 +1,231 @@
+/* WealthLink Media Reviews — single page, plain and fast. */
+
+:root {
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --text: #111111;
+  --text-muted: #555555;
+  --border: #e5e5e5;
+  --bg: #ffffff;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 28px 20px 12px;
+}
+.logo-img {
+  width: 200px;
+  height: auto;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 12px 0 12px;
+}
+h1 .accent {
+  color: var(--blue);
+}
+
+.intro {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+/* Review grid: single column on mobile */
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 20px;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Video card */
+.video-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.video-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (hover: hover) and (pointer: fine) {
+  .video-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
+  }
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity .22s ease;
+}
+.play-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  margin-left: 3px;
+}
+
+.review-quote {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 12px 0 4px;
+}
+.review-attribution {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 48px;
+}
+
+/* ============================================================
+   Hover-preview video. The <video> is layered OVER the poster <img>
+   rather than replacing it, so the poster is still there to fade back
+   to when the cursor leaves, and re-entering doesn't re-download it.
+   States set by wireVideoCards() in main.js:
+     .is-previewing — playing (hover or click)
+     .is-committed  — user clicked; keeps playing on mouse-out, native
+                      controls are live
+     .is-muted      — browser refused sound on this play attempt
+   ============================================================ */
+.video-card .hover-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .22s ease;
+  pointer-events: none;
+}
+.video-card.is-previewing .hover-video {
+  opacity: 1;
+}
+.video-card.is-committed .hover-video {
+  pointer-events: auto;
+}
+.video-card.is-previewing img,
+.video-card.is-previewing .play-btn {
+  opacity: 0;
+}
+
+.video-card .sound-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .72);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 3;
+  white-space: nowrap;
+}
+.video-card.is-muted .sound-hint {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-card,
+  .video-card img,
+  .video-card .play-btn,
+  .video-card .hover-video { transition: none; animation: none; }
+  .video-card:hover { transform: none; }
+}
+
+/* Tablet: 2 up */
+@media (min-width: 640px) {
+  h1 { font-size: 32px; }
+  .review-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 up */
+@media (min-width: 960px) {
+  header { padding-top: 40px; }
+  h1 { font-size: 38px; }
+  .intro { font-size: 17px; }
+  .review-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 28px;
+  }
+}
