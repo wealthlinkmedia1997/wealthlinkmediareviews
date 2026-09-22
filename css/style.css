@@ -141,8 +141,8 @@ h1 .accent {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-muted);
-  margin: 0;
+  color: var(--text);
+  margin: 12px 0 0;
 }
 
 footer {

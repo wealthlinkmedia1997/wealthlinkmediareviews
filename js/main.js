@@ -19,10 +19,17 @@ function reviewCardHTML(r) {
   `;
 }
 
+// Only ever show full rows of 3 (the desktop grid width) - a trailing
+// partial row (e.g. 10 or 11 reviews leaving 1-2 left over) is dropped
+// rather than shown short, so the grid always ends on a clean row.
+const REVIEWS_PER_ROW = 3;
+
 function renderReviews(containerId, reviews) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  el.innerHTML = reviews.map(reviewCardHTML).join("");
+  const fullRowCount = Math.floor(reviews.length / REVIEWS_PER_ROW) * REVIEWS_PER_ROW;
+  const toShow = reviews.slice(0, fullRowCount);
+  el.innerHTML = toShow.map(reviewCardHTML).join("");
   el.classList.add("review-grid");
   wireVideoCards(el);
 }
